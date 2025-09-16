@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: weatherly-backend
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    rootDir: backend
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: WEATHERAPI_KEY
+        sync: false  # Configurar en el dashboard
+
+  - type: web
+    name: weatherly-frontend
+    env: static
+    plan: free
+    buildCommand: cd frontend/WheatherApp && npm install && npm run build
+    staticPublishPath: frontend/WheatherApp/dist
+    rootDir: frontend/WheatherApp
