@@ -8,7 +8,7 @@ Un sistema completo API con una aplicación móvil de clima desarrollada con Exp
 
 **Weatherly** es una aplicación móvil que te permite:
 
-- �� **Buscar el clima** de cualquier ciudad del mundo
+- 🌐 **Buscar el clima** de cualquier ciudad del mundo
 - 📅 **Ver pronósticos** de hasta 14 días
 - ❤️ **Guardar ubicaciones favoritas** para acceso rápido
 - 🔄 **Navegación fluida** entre pantallas con swipe
@@ -30,24 +30,29 @@ Un sistema completo API con una aplicación móvil de clima desarrollada con Exp
 
 ---
 
-## �� Para Desarrolladores
-
 ### Arquitectura del Proyecto
-├── backend/ # API (Node.js + Fastify)
-│ ├── src/
-│ │ ├── routes/ # Rutas de la API
-│ │ ├── services/ # Servicios de negocio
-│ │ └── server.js # Servidor principal
-│ └── package.json
-├── frontend/
-│ ├── WheatherApp/ # App móvil (Expo + React Native)
-│ │ ├── app/ # Pantallas y navegación
-│ │ ├── components/ # Componentes reutilizables
-│ │ ├── hooks/ # Custom hooks
-│ │ ├── services/ # Servicios de API
-│ │ └── contexts/ # Context API
-│ └── LandingWheather/ # Landing page web
-└── README.md
+
+```bash
+📦 Project
+├── 📡 backend/               # API (Node.js + Fastify)
+│   ├── 📂 src/
+│   │   ├── 🛣️ routes/        # Rutas de la API
+│   │   ├── ⚙️ services/      # Servicios de negocio
+│   │   └── 🚀 server.js      # Servidor principal
+│   └── 📜 package.json
+│
+├── 💻 frontend/
+│   ├── 📱 WheatherApp/        # App móvil (Expo + React Native)
+│   │   ├── 📂 app/           # Pantallas y navegación
+│   │   ├── 🧩 components/    # Componentes reutilizables
+│   │   ├── 🪝 hooks/         # Custom hooks
+│   │   ├── 🔌 services/      # Servicios de API
+│   │   └── 🌐 contexts/      # Context API
+│
+│   └── 🖥️ LandingWheather/   # Landing page web
+│
+└── 📘 README.md
+
 ### Tecnologías Utilizadas
 
 #### Backend
