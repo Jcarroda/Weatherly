@@ -22,7 +22,7 @@
     "expo-linking": "~7.1.7",
     "expo-location": "^18.1.6",
     "expo-router": "~5.1.5",
-    "expo-splash-screen": "~0.30.10",
+    "expo-splash-screen": "^0.30.10",
     "expo-status-bar": "~2.2.3",
     "expo-system-ui": "~5.0.11",
     "expo-web-browser": "~14.2.0",
