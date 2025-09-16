@@ -9,13 +9,7 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      - key: API_KEY_SECRETA
+        value: clave_backend
       - key: WEATHERAPI_KEY
-        sync: false  # Configurar en el dashboard
-
-  - type: web
-    name: weatherly-landing
-    env: static
-    plan: free
-    buildCommand: echo "No build needed for static site"
-    staticPublishPath: frontend/LandingWheather
-    rootDir: frontend/LandingWheather
+        sync: false
