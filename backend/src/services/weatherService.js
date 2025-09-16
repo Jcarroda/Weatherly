@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const getWeatherByCity = async (city) => {
-  const apiKey = process.env.WEATHERAPI_KEY;
+  const apiKey = "be245e559c5d4cc4908134721251609";
   const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
   try {
@@ -72,8 +72,8 @@ export const getWeatherByLocation = async (lat, lon) => {
   }
 };
 
-export const getWeatherForecast = async (city, days = 3) => {
-  const apiKey = process.env.WEATHERAPI_KEY;
+export const getWeatherForecast = async (city, days = 14) => {
+  const apiKey = "be245e559c5d4cc4908134721251609";
   const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=${days}&aqi=no&alerts=no`;
 
   try {

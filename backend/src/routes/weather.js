@@ -97,7 +97,7 @@ async function routes(fastify, options) {
 
   // Obtener pronóstico del clima
   fastify.get("/forecast", async (request, reply) => {
-    const { city, days = 3 } = request.query;
+    const { city, days = 14 } = request.query;
 
     if (!city) {
       return reply.code(400).send({ 
