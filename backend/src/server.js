@@ -123,6 +123,9 @@ const start = async () => {
         'http://192.168.1.144:3000',  // Network access
         'exp://192.168.1.144:8081',   // Expo network access
         /^http:\/\/192\.168\.\d+\.\d+:8081$/,  // Any local network IP for Expo
+        /^exp:\/\/.*$/,  // Allow all Expo URLs
+        /^https:\/\/.*\.onrender\.com$/,  // Allow Render URLs
+        true  // Allow all origins for mobile apps
       ],
       credentials: true,
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
