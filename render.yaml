@@ -13,9 +13,9 @@ services:
         sync: false  # Configurar en el dashboard
 
   - type: web
-    name: weatherly-frontend
+    name: weatherly-landing
     env: static
     plan: free
-    buildCommand: cd frontend/WheatherApp && npm install && npm run build
-    staticPublishPath: frontend/WheatherApp/dist
-    rootDir: frontend/WheatherApp
+    buildCommand: echo "No build needed for static site"
+    staticPublishPath: frontend/LandingWheather
+    rootDir: frontend/LandingWheather

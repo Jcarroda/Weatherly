@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherly - App del Clima</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 120px 0 80px;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #00b894;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 0 10px;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2d3436;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2d3436;
+        }
+        
+        .feature p {
+            color: #636e72;
+            line-height: 1.6;
+        }
+        
+        .download-section {
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .download-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .download-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        footer {
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🌤️ Weatherly</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Weatherly</h1>
+                <p>La aplicación del clima más completa para tu móvil</p>
+                <a href="#download" class="download-btn">Descargar APK</a>
+                <a href="https://play.google.com/store" class="download-btn" target="_blank">Google Play</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Características</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Clima Global</h3>
+                        <p>Consulta el clima de cualquier ciudad del mundo con información precisa y actualizada.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">��</div>
+                        <h3>Pronóstico Extendido</h3>
+                        <p>Obtén pronósticos de hasta 14 días con detalles completos del clima.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">❤️</div>
+                        <h3>Ubicaciones Favoritas</h3>
+                        <p>Guarda tus ciudades preferidas para acceso rápido y fácil.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">��</div>
+                        <h3>Ubicación Automática</h3>
+                        <p>Detecta automáticamente tu ubicación usando GPS para mayor comodidad.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Navegación Fluida</h3>
+                        <p>Interfaz intuitiva con navegación por deslizamiento entre pantallas.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Búsqueda Global</h3>
+                        <p>Busca en una pantalla y actualiza automáticamente todas las demás.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="download-section" id="download">
+            <div class="container">
+                <h2>Descarga Weatherly</h2>
+                <p>Disponible para Android. Próximamente en iOS.</p>
+                <a href="#" class="download-btn">Descargar APK (Android)</a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
+                    Versión 1.0.0 | Tamaño: ~25MB
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Weatherly. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
