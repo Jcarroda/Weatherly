@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Política de Privacidad - Weatherly</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+        --primary-color: #138aec;
+      }
+    </style>
+</head>
+
+<body class="bg-slate-50 font-['Space_Grotesk',_'Noto_Sans',_sans-serif]">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-slate-200 bg-slate-50/80 px-4 py-3 backdrop-blur-sm sm:px-6 lg:px-10">
+            <div class="flex items-center gap-3 text-slate-900">
+                <div class="size-8 text-blue-500">
+                    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h2 class="text-xl font-bold tracking-tight">Weatherly</h2>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="../index.html" class="text-sm font-medium text-slate-700 hover:text-blue-500 transition-colors"
+                    data-es="Inicio" data-en="Home">Inicio</a>
+                <!-- Botón de idioma -->
+                <button id="languageBtn" onclick="toggleLanguage()"
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-200 text-slate-700 text-sm font-medium hover:bg-slate-300 transition-colors">
+                    <span class="material-symbols-outlined text-lg">language</span>
+                    <span id="langText">EN</span>
+                </button>
+            </div>
+        </header>
+        <main class="flex-grow">
+            <section class="py-20 px-4 sm:px-6 lg:px-10">
+                <div class="mx-auto max-w-4xl">
+                    <div class="text-center mb-12">
+                        <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl"
+                            data-es="Política de Privacidad"
+                            data-en="Privacy Policy">Política de Privacidad</h1>
+                        <p class="mt-4 text-lg text-slate-600"
+                            data-es="Última actualización: 16 de septiembre de 2024"
+                            data-en="Last updated: September 16, 2024">Última actualización: 16 de septiembre de 2024</p>
+                    </div>
+
+                    <div class="prose prose-lg max-w-none">
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-4"
+                                data-es="1. Información que Recopilamos"
+                                data-en="1. Information We Collect">1. Información que Recopilamos</h2>
+                            <p class="text-slate-600 mb-4"
+                                data-es="Weatherly recopila la siguiente información para brindarte el mejor servicio meteorológico:"
+                                data-en="Weatherly collects the following information to provide you with the best weather service:">
+                                Weatherly recopila la siguiente información para brindarte el mejor servicio meteorológico:
+                            </p>
+                            <ul class="list-disc list-inside text-slate-600 space-y-2">
+                                <li data-es="Ubicación geográfica (con tu consentimiento)" data-en="Geographic location (with your consent)">Ubicación geográfica (con tu consentimiento)</li>
+                                <li data-es="Ciudades buscadas y guardadas como favoritas" data-en="Cities searched and saved as favorites">Ciudades buscadas y guardadas como favoritas</li>
+                                <li data-es="Preferencias de configuración de la aplicación" data-en="Application configuration preferences">Preferencias de configuración de la aplicación</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-4"
+                                data-es="2. Cómo Utilizamos tu Información"
+                                data-en="2. How We Use Your Information">2. Cómo Utilizamos tu Información</h2>
+                            <p class="text-slate-600 mb-4"
+                                data-es="Utilizamos la información recopilada para:"
+                                data-en="We use the collected information to:">
+                                Utilizamos la información recopilada para:
+                            </p>
+                            <ul class="list-disc list-inside text-slate-600 space-y-2">
+                                <li data-es="Proporcionar información meteorológica precisa y actualizada" data-en="Provide accurate and up-to-date weather information">Proporcionar información meteorológica precisa y actualizada</li>
+                                <li data-es="Personalizar tu experiencia con ubicaciones favoritas" data-en="Personalize your experience with favorite locations">Personalizar tu experiencia con ubicaciones favoritas</li>
+                                <li data-es="Mejorar el rendimiento y funcionalidad de la aplicación" data-en="Improve application performance and functionality">Mejorar el rendimiento y funcionalidad de la aplicación</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-4"
+                                data-es="3. Compartir Información"
+                                data-en="3. Information Sharing">3. Compartir Información</h2>
+                            <p class="text-slate-600"
+                                data-es="No vendemos, comercializamos ni transferimos tu información personal a terceros. Solo compartimos datos con proveedores de servicios meteorológicos para obtener información actualizada del clima."
+                                data-en="We do not sell, trade, or transfer your personal information to third parties. We only share data with weather service providers to obtain updated weather information.">
+                                No vendemos, comercializamos ni transferimos tu información personal a terceros. Solo compartimos datos con proveedores de servicios meteorológicos para obtener información actualizada del clima.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-4"
+                                data-es="4. Almacenamiento de Datos"
+                                data-en="4. Data Storage">4. Almacenamiento de Datos</h2>
+                            <p class="text-slate-600"
+                                data-es="Los datos se almacenan localmente en tu dispositivo. Las ubicaciones favoritas y preferencias se guardan únicamente en tu teléfono y no se sincronizan con servidores externos."
+                                data-en="Data is stored locally on your device. Favorite locations and preferences are saved only on your phone and are not synchronized with external servers.">
+                                Los datos se almacenan localmente en tu dispositivo. Las ubicaciones favoritas y preferencias se guardan únicamente en tu teléfono y no se sincronizan con servidores externos.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-4"
+                                data-es="5. Tus Derechos"
+                                data-en="5. Your Rights">5. Tus Derechos</h2>
+                            <p class="text-slate-600 mb-4"
+                                data-es="Tienes derecho a:"
+                                data-en="You have the right to:">
+                                Tienes derecho a:
+                            </p>
+                            <ul class="list-disc list-inside text-slate-600 space-y-2">
+                                <li data-es="Denegar permisos de ubicación en cualquier momento" data-en="Deny location permissions at any time">Denegar permisos de ubicación en cualquier momento</li>
+                                <li data-es="Eliminar datos locales desinstalando la aplicación" data-en="Delete local data by uninstalling the application">Eliminar datos locales desinstalando la aplicación</li>
+                                <li data-es="Contactarnos para cualquier consulta sobre privacidad" data-en="Contact us for any privacy inquiries">Contactarnos para cualquier consulta sobre privacidad</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg p-8">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-4"
+                                data-es="6. Contacto"
+                                data-en="6. Contact">6. Contacto</h2>
+                            <p class="text-slate-600"
+                                data-es="Si tienes preguntas sobre esta política de privacidad, puedes contactarnos a través de:"
+                                data-en="If you have questions about this privacy policy, you can contact us through:">
+                                Si tienes preguntas sobre esta política de privacidad, puedes contactarnos a través de:
+                            </p>
+                            <p class="text-blue-500 font-medium mt-2">
+                                <a href="https://github.com/Jcarroda" target="_blank" class="hover:underline">GitHub: @Jcarroda</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-slate-100 border-t border-slate-200">
+            <div class="mx-auto max-w-5xl py-12 px-4 sm:px-6 lg:px-10">
+                <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+                    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                        <a class="text-sm text-slate-600 hover:text-blue-500 transition-colors" href="privacy.html"
+                            data-es="Política de Privacidad" data-en="Privacy Policy">Política de Privacidad</a>
+                        <a class="text-sm text-slate-600 hover:text-blue-500 transition-colors" href="terms.html"
+                            data-es="Términos de Servicio" data-en="Terms of Service">Términos de Servicio</a>
+                        <a class="text-sm text-slate-600 hover:text-blue-500 transition-colors" href="contact.html"
+                            data-es="Contáctanos" data-en="Contact Us">Contáctanos</a>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <a class="text-slate-500 hover:text-blue-500 transition-colors" href="https://www.linkedin.com/in/javier-carro-ba0908349/" target="_blank">
+                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a class="text-slate-500 hover:text-blue-500 transition-colors" href="https://github.com/Jcarroda" target="_blank">
+                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <p class="mt-8 text-center text-sm text-slate-500"
+                    data-es="© 2024 Weatherly. Todos los derechos reservados."
+                    data-en="© 2024 Weatherly. All rights reserved.">© 2024 Weatherly. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let currentLanguage = 'es'; // Idioma por defecto: español
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            const elements = document.querySelectorAll('[data-es][data-en]');
+            const langText = document.getElementById('langText');
+            
+            elements.forEach(element => {
+                if (element.tagName === 'HTML') {
+                    element.lang = currentLanguage;
+                } else {
+                    element.textContent = element.getAttribute(`data-${currentLanguage}`);
+                }
+            });
+            
+            // Actualizar el texto del botón de idioma
+            langText.textContent = currentLanguage.toUpperCase();
+            
+            // Actualizar el atributo lang del HTML
+            document.documentElement.lang = currentLanguage;
+        }
+
+        // Inicializar con español
+        document.addEventListener('DOMContentLoaded', function() {
+            updateLanguage();
+        });
+    </script>
+
+</body>
+
+</html>

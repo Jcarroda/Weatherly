@@ -1,241 +1,264 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weatherly - App del Clima</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 120px 0 80px;
-            color: white;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .download-btn {
-            display: inline-block;
-            background: #00b894;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            margin: 0 10px;
-        }
-        
-        .download-btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        .features {
-            background: white;
-            padding: 80px 0;
-        }
-        
-        .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #2d3436;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .feature:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #2d3436;
-        }
-        
-        .feature p {
-            color: #636e72;
-            line-height: 1.6;
-        }
-        
-        .download-section {
-            background: #2d3436;
-            color: white;
-            text-align: center;
-            padding: 80px 0;
-        }
-        
-        .download-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .download-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        footer {
-            background: #2d3436;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-        }
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Weatherly</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+        --primary-color: #138aec;
+      }
     </style>
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <div class="logo">🌤️ Weatherly</div>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Weatherly</h1>
-                <p>La aplicación del clima más completa para tu móvil</p>
-                <a href="#download" class="download-btn">Descargar APK</a>
-                <a href="https://play.google.com/store" class="download-btn" target="_blank">Google Play</a>
+<body class="bg-slate-50 font-['Space_Grotesk',_'Noto_Sans',_sans-serif]">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-slate-200 bg-slate-50/80 px-4 py-3 backdrop-blur-sm sm:px-6 lg:px-10">
+            <div class="flex items-center gap-3 text-slate-900">
+                <div class="size-8 text-blue-500">
+                    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h2 class="text-xl font-bold tracking-tight">Weatherly</h2>
             </div>
-        </section>
-
-        <section class="features">
-            <div class="container">
-                <h2>Características</h2>
-                <div class="features-grid">
-                    <div class="feature">
-                        <div class="feature-icon">🌍</div>
-                        <h3>Clima Global</h3>
-                        <p>Consulta el clima de cualquier ciudad del mundo con información precisa y actualizada.</p>
+            <nav class="hidden items-center gap-8 md:flex">
+                <a class="text-sm font-medium text-slate-700 hover:text-blue-500 transition-colors"
+                    href="#features" data-es="Características" data-en="Features">Características</a>
+                <a class="text-sm font-medium text-slate-700 hover:text-blue-500 transition-colors"
+                    href="#screenshots" data-es="Pantallas" data-en="Screens">Pantallas</a>
+                <a class="text-sm font-medium text-slate-700 hover:text-blue-500 transition-colors"
+                    href="#download" data-es="Descargar" data-en="Download">Descargar</a>
+            </nav>
+            <!-- Solo el botón de idioma -->
+            <button id="languageBtn" onclick="toggleLanguage()"
+                class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-200 text-slate-700 text-sm font-medium hover:bg-slate-300 transition-colors">
+                <span class="material-symbols-outlined text-lg">language</span>
+                <span id="langText">EN</span>
+            </button>
+        </header>
+        <main class="flex-grow">
+            <section
+                class="relative flex min-h-[60vh] items-center justify-center bg-cover bg-center py-20 px-4 text-center text-white"
+                style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxKlxYox3RO6EHOX6H0TV_8MGvBskTlpxLmcosurvW_DuFA8yuMlKIs-kCUGoBGYbONm0mFIoqCw0sE0nipweExvhIDvTjL6USA1mln_EVrvG4NO_u86Ax6tnRl2LgVOrWlyzy4Gcwq-It5nYMfdCR4H4ZBYbk-yGBJdVYuN4guAjUQzvKANXu1LrUY-A5sHJEKbO70qooA3ntE0DMi5DcJIqYQwRMjd5tBkEHbLegw6UNGK5PHrjzHBthcrcAdpmfOD6y3bHI_YY");'>
+                <div class="max-w-3xl">
+                    <h1 class="text-4xl font-black leading-tight tracking-tighter md:text-6xl" 
+                        data-es="Tu Compañero Personal del Clima" 
+                        data-en="Your Personal Weather Companion">Tu Compañero Personal del Clima</h1>
+                    <p class="mt-4 text-lg font-normal text-slate-200 md:text-xl"
+                        data-es="Mantente al día con el clima con Weatherly. Pronósticos precisos, actualizaciones en tiempo real y visuales hermosos, todo en un solo lugar."
+                        data-en="Stay ahead of the weather with Weatherly. Accurate forecasts, real-time updates, and beautiful visuals, all in one place.">
+                        Mantente al día con el clima con Weatherly. Pronósticos precisos, actualizaciones en tiempo real y visuales hermosos, todo en un solo lugar.
+                    </p>
+                    <a class="mt-8 inline-flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-blue-500 text-slate-50 text-base font-bold leading-normal tracking-wide shadow-lg transition-transform hover:scale-105"
+                        href="#download">
+                        <span class="truncate" data-es="Descargar Ahora" data-en="Download Now">Descargar Ahora</span>
+                    </a>
+                </div>
+            </section>
+            <section class="py-20 px-4 sm:px-6 lg:px-10" id="features">
+                <div class="mx-auto max-w-5xl">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+                            data-es="Todo lo que Necesitas en una App del Clima"
+                            data-en="Everything You Need in a Weather App">Todo lo que Necesitas en una App del Clima</h2>
+                        <p class="mt-4 text-lg text-slate-600"
+                            data-es="Características poderosas para mantenerte informado y preparado."
+                            data-en="Powerful features to keep you informed and prepared.">Características poderosas para mantenerte informado y preparado.</p>
                     </div>
-                    <div class="feature">
-                        <div class="feature-icon">��</div>
-                        <h3>Pronóstico Extendido</h3>
-                        <p>Obtén pronósticos de hasta 14 días con detalles completos del clima.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">❤️</div>
-                        <h3>Ubicaciones Favoritas</h3>
-                        <p>Guarda tus ciudades preferidas para acceso rápido y fácil.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">��</div>
-                        <h3>Ubicación Automática</h3>
-                        <p>Detecta automáticamente tu ubicación usando GPS para mayor comodidad.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🔄</div>
-                        <h3>Navegación Fluida</h3>
-                        <p>Interfaz intuitiva con navegación por deslizamiento entre pantallas.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🌐</div>
-                        <h3>Búsqueda Global</h3>
-                        <p>Busca en una pantalla y actualiza automáticamente todas las demás.</p>
+                    <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                        <div class="flex flex-col items-center text-center">
+                            <div
+                                class="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-500">
+                                <span class="material-symbols-outlined text-4xl">update</span>
+                            </div>
+                            <h3 class="mt-5 text-xl font-bold text-slate-900"
+                                data-es="Actualizaciones en Tiempo Real"
+                                data-en="Real-Time Updates">Actualizaciones en Tiempo Real</h3>
+                            <p class="mt-2 text-sm text-slate-600"
+                                data-es="Obtén información meteorológica actualizada al minuto para tu ubicación actual y cualquier otro lugar del mundo."
+                                data-en="Get up-to-the-minute weather information for your current location and any other place worldwide.">Obtén información meteorológica actualizada al minuto para tu ubicación actual y cualquier otro lugar del mundo.</p>
+                        </div>
+                        <div class="flex flex-col items-center text-center">
+                            <div
+                                class="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-500">
+                                <span class="material-symbols-outlined text-4xl">model_training</span>
+                            </div>
+                            <h3 class="mt-5 text-xl font-bold text-slate-900"
+                                data-es="Pronósticos Precisos"
+                                data-en="Accurate Forecasts">Pronósticos Precisos</h3>
+                            <p class="mt-2 text-sm text-slate-600"
+                                data-es="Planifica tu día con confianza usando nuestros pronósticos meteorológicos precisos por horas y días."
+                                data-en="Plan your day with confidence using our precise hourly and daily weather forecasts.">Planifica tu día con confianza usando nuestros pronósticos meteorológicos precisos por horas y días.</p>
+                        </div>
+                        <div class="flex flex-col items-center text-center">
+                            <div
+                                class="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-500">
+                                <span class="material-symbols-outlined text-4xl">thermostat</span>
+                            </div>
+                            <h3 class="mt-5 text-xl font-bold text-slate-900"
+                                data-es="Seguimiento de Temperatura"
+                                data-en="Temperature Tracking">Seguimiento de Temperatura</h3>
+                            <p class="mt-2 text-sm text-slate-600"
+                                data-es="Monitorea los cambios de temperatura durante el día con gráficos detallados e información."
+                                data-en="Monitor temperature changes throughout the day with detailed graphs and insights.">Monitorea los cambios de temperatura durante el día con gráficos detallados e información.</p>
+                        </div>
+                        <div class="flex flex-col items-center text-center">
+                            <div
+                                class="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-500">
+                                <span class="material-symbols-outlined text-4xl">umbrella</span>
+                            </div>
+                            <h3 class="mt-5 text-xl font-bold text-slate-900"
+                                data-es="Alertas de Lluvia"
+                                data-en="Rain Alerts">Alertas de Lluvia</h3>
+                            <p class="mt-2 text-sm text-slate-600"
+                                data-es="Recibe notificaciones oportunas sobre lluvia o tormentas próximas para mantenerte preparado."
+                                data-en="Receive timely notifications about upcoming rain or storms to stay prepared.">Recibe notificaciones oportunas sobre lluvia o tormentas próximas para mantenerte preparado.</p>
+                        </div>
                     </div>
                 </div>
+            </section>
+            <section class="bg-slate-100 py-20 px-4 sm:px-6 lg:px-10" id="screenshots">
+                <div class="mx-auto max-w-5xl">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+                            data-es="Descubre las Pantallas de Weatherly"
+                            data-en="Discover Weatherly's Screens">Descubre las Pantallas de Weatherly</h2>
+                        <p class="mt-4 text-lg text-slate-600"
+                            data-es="Navega fácilmente entre las diferentes secciones de la app con un diseño intuitivo y funcional."
+                            data-en="Navigate easily between different app sections with an intuitive and functional design.">Navega fácilmente entre las diferentes secciones de la app con un diseño intuitivo y funcional.</p>
+                    </div>
+                    <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col items-center">
+                            <img alt="Pantalla Principal - Home"
+                                class="w-full max-w-xs rounded-xl shadow-lg transition-transform hover:scale-105"
+                                src="./public/home.jpeg" />
+                            <h3 class="mt-4 text-lg font-medium text-slate-900"
+                                data-es="Pantalla Principal"
+                                data-en="Home Screen">Pantalla Principal</h3>
+                            <p class="mt-1 text-sm text-slate-600 text-center"
+                                data-es="Consulta el clima actual, busca ciudades y accede rápidamente a toda la información meteorológica."
+                                data-en="Check current weather, search cities and quickly access all weather information.">Consulta el clima actual, busca ciudades y accede rápidamente a toda la información meteorológica.</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img alt="Pantalla de Pronóstico - Forecast"
+                                class="w-full max-w-xs rounded-xl shadow-lg transition-transform hover:scale-105"
+                                src="./public/Forecast.jpeg" />
+                            <h3 class="mt-4 text-lg font-medium text-slate-900"
+                                data-es="Pronóstico Extendido"
+                                data-en="Extended Forecast">Pronóstico Extendido</h3>
+                            <p class="mt-1 text-sm text-slate-600 text-center"
+                                data-es="Visualiza el pronóstico detallado de hasta 14 días con información completa del clima."
+                                data-en="View detailed forecast up to 14 days with complete weather information.">Visualiza el pronóstico detallado de hasta 14 días con información completa del clima.</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img alt="Pantalla de Favoritos - Favorites"
+                                class="w-full max-w-xs rounded-xl shadow-lg transition-transform hover:scale-105"
+                                src="./public/Favourites.jpeg" />
+                            <h3 class="mt-4 text-lg font-medium text-slate-900"
+                                data-es="Ubicaciones Favoritas"
+                                data-en="Favorite Locations">Ubicaciones Favoritas</h3>
+                            <p class="mt-1 text-sm text-slate-600 text-center"
+                                data-es="Guarda tus ciudades preferidas para acceder rápidamente al clima de tus lugares favoritos."
+                                data-en="Save your favorite cities to quickly access weather for your preferred locations.">Guarda tus ciudades preferidas para acceder rápidamente al clima de tus lugares favoritos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20 px-4 sm:px-6 lg:px-10 text-center" id="download">
+                <div class="mx-auto max-w-2xl">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+                        data-es="Descarga Weatherly Hoy"
+                        data-en="Download Weatherly Today">Descarga Weatherly Hoy</h2>
+                    <p class="mt-4 text-lg text-slate-600"
+                        data-es="Obtén la app del clima más precisa y hermosa disponible en tu dispositivo."
+                        data-en="Get the most accurate and beautiful weather app available on your device.">Obtén la app del clima más precisa y hermosa disponible en tu dispositivo.</p>
+                    <div class="mt-8 flex justify-center">
+                        <!-- Botón de APK con enlace funcional -->
+                        <a href="https://expo.dev/accounts/jcarroda/projects/weatherly/builds/0b4a4504-463b-49c6-a0b9-a8dcba218ac4"
+                            target="_blank"
+                            class="flex items-center justify-center gap-2 rounded-xl h-14 px-8 bg-blue-500 text-slate-50 text-base font-bold leading-normal tracking-wide shadow-lg transition-transform hover:scale-105">
+                            <span class="material-symbols-outlined">android</span>
+                            <span class="truncate" data-es="Descargar APK" data-en="Download APK">Descargar APK</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-slate-100 border-t border-slate-200">
+            <div class="mx-auto max-w-5xl py-12 px-4 sm:px-6 lg:px-10">
+                <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+                    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                        <a class="text-sm text-slate-600 hover:text-blue-500 transition-colors" href="pages/privacy.html"
+                            data-es="Política de Privacidad" data-en="Privacy Policy">Política de Privacidad</a>
+                        <a class="text-sm text-slate-600 hover:text-blue-500 transition-colors" href="pages/terms.html"
+                            data-es="Términos de Servicio" data-en="Terms of Service">Términos de Servicio</a>
+                        <a class="text-sm text-slate-600 hover:text-blue-500 transition-colors" href="pages/contact.html"
+                            data-es="Contáctanos" data-en="Contact Us">Contáctanos</a>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <a class="text-slate-500 hover:text-blue-500 transition-colors" href="https://www.linkedin.com/in/javier-carro-ba0908349/" target="_blank">
+                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a class="text-slate-500 hover:text-blue-500 transition-colors" href="https://github.com/Jcarroda" target="_blank">
+                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <p class="mt-8 text-center text-sm text-slate-500"
+                    data-es="© 2024 Weatherly. Todos los derechos reservados."
+                    data-en="© 2024 Weatherly. All rights reserved.">© 2024 Weatherly. Todos los derechos reservados.</p>
             </div>
-        </section>
+        </footer>
+    </div>
 
-        <section class="download-section" id="download">
-            <div class="container">
-                <h2>Descarga Weatherly</h2>
-                <p>Disponible para Android. Próximamente en iOS.</p>
-                <a href="#" class="download-btn">Descargar APK (Android)</a>
-                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
-                    Versión 1.0.0 | Tamaño: ~25MB
-                </p>
-            </div>
-        </section>
-    </main>
+    <script>
+        let currentLanguage = 'es'; // Idioma por defecto: español
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Weatherly. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            const elements = document.querySelectorAll('[data-es][data-en]');
+            const langText = document.getElementById('langText');
+            
+            elements.forEach(element => {
+                if (element.tagName === 'HTML') {
+                    element.lang = currentLanguage;
+                } else {
+                    element.textContent = element.getAttribute(`data-${currentLanguage}`);
+                }
+            });
+            
+            // Actualizar el texto del botón de idioma
+            langText.textContent = currentLanguage.toUpperCase();
+            
+            // Actualizar el atributo lang del HTML
+            document.documentElement.lang = currentLanguage;
+        }
+
+        // Inicializar con español
+        document.addEventListener('DOMContentLoaded', function() {
+            updateLanguage();
+        });
+    </script>
+
 </body>
+
 </html>
