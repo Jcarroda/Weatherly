@@ -1,7 +1,7 @@
 // Configuración de la API
 export const API_CONFIG = {
-  // URL base del backend hardcodeado
-  BASE_URL: 'http://192.168.1.144:3000',
+  // URL base del backend desplegado
+  BASE_URL: 'https://weatherly-backend-nrh7.onrender.com',
 
   // API Key hardcodeado
   API_KEY: 'clave_backend',
