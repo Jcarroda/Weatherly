@@ -1,19 +1,27 @@
 # Dependencies
 node_modules/
 */node_modules/
+**/node_modules/
 
 # Package lock files
 package-lock.json
+**/package-lock.json
 
 # Environment variables
 .env
 .env.local
 .env.production
+**/.env
+**/.env.local
+**/.env.production
 
 # Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
 
 # Runtime data
 pids
@@ -23,15 +31,18 @@ pids
 
 # Coverage directory used by tools like istanbul
 coverage/
+**/coverage/
 
 # nyc test coverage
 .nyc_output
+**/.nyc_output
 
 # Dependency directories
 jspm_packages/
 
 # Optional npm cache directory
 .npm
+**/.npm
 
 # Optional REPL history
 .node_repl_history
@@ -50,6 +61,8 @@ jspm_packages/
 .idea/
 *.swp
 *.swo
+**/.vscode/
+**/.idea/
 
 # OS generated files
 .DS_Store
@@ -59,3 +72,47 @@ jspm_packages/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Expo specific
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+**/.expo/
+**/dist/
+**/web-build/
+**/expo-env.d.ts
+
+# Metro
+.metro-health-check*
+**/.metro-health-check*
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+**/.kotlin/
+**/*.orig.*
+**/*.jks
+**/*.p8
+**/*.p12
+**/*.key
+**/*.mobileprovision
+
+# TypeScript
+*.tsbuildinfo
+**/*.tsbuildinfo
+
+# Build outputs
+build/
+**/build/
+
+# Temporary files
+*.tmp
+*.temp
+**/*.tmp
+**/*.temp
