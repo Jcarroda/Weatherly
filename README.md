@@ -355,28 +355,6 @@ export const API_CONFIG = {
 };
 ```
 
-### URLs de Producción
-
-- **Backend API**: https://weatherly-backend-nrh7.onrender.com/
-- **Landing Page**: [URL de Vercel]
-- **APK Download**: [Enlace de EAS Build]
-
-### Troubleshooting
-
-#### Problemas Comunes
-
-1. **App móvil no se conecta al backend**:
-   - Verificar configuración CORS
-   - Comprobar URL en config/api.ts
-   - Verificar API key en headers
-
-2. **Error 401 Unauthorized**:
-   - Verificar que API_KEY_SECRETA coincida
-   - Comprobar header x-api-key
-
-3. **Error de WeatherAPI**:
-   - Verificar WEATHERAPI_KEY en Render
-   - Comprobar límites de la API
 
 ### Licencia
 
